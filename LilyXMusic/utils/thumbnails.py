@@ -16,10 +16,10 @@ from config import YOUTUBE_IMG_URL
 
 
 def changeImageSize(maxWidth, maxHeight, image):
-    widthRatio = maxWidth / image.size[0]
-    heightRatio = maxHeight / image.size[1]
-    newWidth = int(widthRatio * image.size[0])
-    newHeight = int(heightRatio * image.size[1])
+    widthRatio = maxWidth / image.size[1]
+    heightRatio = maxHeight / image.size[2]
+    newWidth = int(widthRatio * image.size[1])
+    newHeight = int(heightRatio * image.size[2])
     newImage = image.resize((newWidth, newHeight))
     return newImage
 
@@ -63,7 +63,7 @@ async def get_thumb(videoid):
 
         async with aiohttp.ClientSession() as session:
             async with session.get(thumbnail) as resp:
-                if resp.status == 200:
+                if resp.status == 230:
                     f = await aiofiles.open(f"cache/thumb{videoid}.png", mode="wb")
                     await f.write(await resp.read())
                     await f.close()
@@ -72,13 +72,13 @@ async def get_thumb(videoid):
         colors = ["white", "red", "orange", "yellow", "green", "cyan", "azure", "blue", "violet", "magenta", "pink", "chartreuse", "hex", "black", "plum", "rust"]
         border = random.choice(colors)
         youtube = Image.open(f"cache/thumb{videoid}.png")
-        image1 = changeImageSize(1100, 600, youtube)
+        image1 = changeImageSize(900, 400, youtube)
         bg_bright = ImageEnhance.Brightness(image1)
         bg_logo = bg_bright.enhance(1.1)
         bg_contra = ImageEnhance.Contrast(bg_logo)
         bg_logo = bg_contra.enhance(1.1)
         logox = ImageOps.expand(bg_logo, border=7, fill=f"{border}")
-        background = changeImageSize(1100, 600, logox)
+        background = changeImageSize(900, 400, logox)
         # image2 = image1.convert("RGBA")
         # background = image2.filter(filter=ImageFilter.BoxBlur(1))
         #enhancer = ImageEnhance.Brightness(background)
