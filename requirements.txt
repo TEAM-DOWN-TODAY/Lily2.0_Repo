@@ -9,7 +9,7 @@ hachoir
 heroku3
 motor
 numpy
-pillow
+pillow==9.5.0
 psutil
 py-tgcalls==0.9.7
 pykeyboard
