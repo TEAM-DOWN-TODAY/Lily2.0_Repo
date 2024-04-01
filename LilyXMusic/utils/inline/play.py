@@ -33,25 +33,25 @@ def stream_markup_timer(_, chat_id, played, dur):
     percentage = (played_sec / duration_sec) * 100
     umm = math.floor(percentage)
     if 0 < umm <= 10:
-        bar = "ﮩـﮩﮩ٨ـ𝐋ɪʟʏﮩ٨ـﮩﮩ٨ـ "
+        bar = "•ﮩـﮩﮩ٨ـ𝐋ɪʟʏﮩ٨ـﮩﮩ٨ـ "
     elif 10 < umm < 20:
-        bar = "ﮩـﮩﮩ٨ـ𝐋ɪʟʏﮩ٨ـﮩﮩ٨ـ "
+        bar = "ﮩـﮩﮩ٨•ـ𝐋ɪʟʏﮩ٨ـﮩﮩ٨ـ "
     elif 20 <= umm < 30:
-        bar = "ﮩـﮩﮩ٨ـ𝐋ɪʟʏﮩ٨ـﮩﮩ٨ـ "
+        bar = "ﮩـﮩ•ﮩ٨ـ𝐋ɪʟʏﮩ٨ـﮩﮩ٨ـ "
     elif 30 <= umm < 40:
-        bar = "ﮩـﮩﮩ٨ـ𝐋ɪʟʏﮩ٨ـﮩﮩ٨ـ "
+        bar = "ﮩـ•ﮩﮩ٨ـ𝐋ɪʟʏﮩ٨ـﮩﮩ٨ـ "
     elif 40 <= umm < 50:
-        bar = "ﮩـﮩﮩ٨ـ𝐋ɪʟʏﮩ٨ـﮩﮩ٨ـ "
+        bar = "ﮩـﮩﮩ٨ـ•𝐋ɪʟʏﮩ٨ـﮩﮩ٨ـ "
     elif 50 <= umm < 60:
-        bar = "ﮩـﮩﮩ٨ـ𝐋ɪʟʏﮩ٨ـﮩﮩ٨ـ "
+        bar = "ﮩـﮩﮩ٨ـ𝐋ɪ•ʟʏﮩ٨ـﮩﮩ٨ـ "
     elif 60 <= umm < 70:
-        bar = "ﮩـﮩﮩ٨ـ𝐋ɪʟʏﮩ٨ـﮩﮩ٨ـ "
+        bar = "ﮩـﮩﮩ٨ـ𝐋ɪʟʏ•ﮩ٨ـﮩﮩ٨ـ "
     elif 70 <= umm < 80:
-        bar = "ﮩـﮩﮩ٨ـ𝐋ɪʟʏﮩ٨ـﮩﮩ٨ـ "
+        bar = "ﮩـﮩﮩ٨ـ𝐋ɪʟʏﮩ٨ـﮩﮩ•٨ـ "
     elif 80 <= umm < 95:
-        bar = "ﮩـﮩﮩ٨ـ𝐋ɪʟʏﮩ٨ـﮩﮩ٨ـ "   
+        bar = "ﮩـﮩﮩ٨ـ𝐋ɪʟʏﮩ٨ـ•ﮩﮩ٨ـ "   
     else:
-        bar = "ﮩـﮩﮩ٨ـ𝐋ɪʟʏﮩ٨ـﮩﮩ٨ـ "
+        bar = "ﮩـﮩﮩ٨ـ𝐋ɪʟʏﮩ٨ـﮩﮩ٨ـ• "
         
     buttons = [
         [
@@ -69,10 +69,10 @@ def stream_markup_timer(_, chat_id, played, dur):
         ],
       [
             InlineKeyboardButton(
-                text="•𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁•", url="https://t.me/ITS_ARYAAN",
+                text="• 𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 •", url="https://t.me/ll_Mr_Axel_ll",
             ),
             InlineKeyboardButton(
-                text="•𝐇𝙴𝚁𝙾𝙺𝚄~𝙲𝙲•", url="https://t.me/THECCHUB",
+                text="• 𝐂ʜᴀɴɴᴇʟ •", url="https://t.me/Mr_Axel_Supports",
             )
         ],
          [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="𝐂ʟᴏsᴇ-𝐊ᴀʀᴏ")],
@@ -91,10 +91,10 @@ def stream_markup(_, chat_id):
          ],
         [
             InlineKeyboardButton(
-                text="•𝐃ᴇᴠᴇʟᴏᴘᴇʀ•", url="https://t.me/ITS_ARYAAN",
+                text="• 𝐃ᴇᴠᴇʟᴏᴘᴇʀ •", url="https://t.me/ll_Mr_Axel_ll",
             ),
             InlineKeyboardButton(
-                text="•𝐇ᴇʀᴏᴋᴜ~ᴄᴄ•", url="https://t.me/THECCHUB",
+                text="• 𝐂ʜᴀɴɴᴇʟ •", url="https://t.me/Mr_Axel_Supports",
             )
         ],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="𝐂ʟᴏsᴇ-𝐊ᴀʀᴏ")],
