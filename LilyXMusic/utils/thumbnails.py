@@ -16,10 +16,10 @@ from config import YOUTUBE_IMG_URL
 
 
 def changeImageSize(maxWidth, maxHeight, image):
-    widthRatio = maxWidth / image.size[1]
-    heightRatio = maxHeight / image.size[2]
-    newWidth = int(widthRatio * image.size[1])
-    newHeight = int(heightRatio * image.size[2])
+    widthRatio = maxWidth / image.size[0]
+    heightRatio = maxHeight / image.size[1]
+    newWidth = int(widthRatio * image.size[0])
+    newHeight = int(heightRatio * image.size[1])
     newImage = image.resize((newWidth, newHeight))
     return newImage
 
